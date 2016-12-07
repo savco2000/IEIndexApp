@@ -10,13 +10,13 @@ namespace IEIndexApp.Domain.DomainModels
         public PublicationYears PublicationYear { get; set; }
         public bool IsSupplement { get; set; }
         public string Hyperlink { get; set; }
-        public ICollection<Author> Authors { get; set; }
-        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<ArticleAuthor> ArticleAuthors { get; set; }
+        public ICollection<SubjectArticle> SubjectArticles { get; set; }
 
         public Article()
         {
-            Authors = new HashSet<Author>();
-            Subjects = new HashSet<Subject>();
+            ArticleAuthors = new HashSet<ArticleAuthor>();
+            SubjectArticles = new HashSet<SubjectArticle>();
         }
     }
 }

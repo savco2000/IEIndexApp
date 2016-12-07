@@ -5,11 +5,11 @@ namespace IEIndexApp.Domain.DomainModels
     public class Subject : Entity
     {
         public string Name { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<SubjectArticle> SubjectArticles { get; set; }
 
         public Subject()
         {
-            Articles = new HashSet<Article>();
+            SubjectArticles = new HashSet<SubjectArticle>();
         }
     }
 }
